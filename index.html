@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITLA HUB</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('pagina-.jpg');                                 
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+    header {
+        background-color: #fffdfda6;
+        color: rgb(18, 15, 209);
+        padding: 1% 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .header-content {
+        display: flex;
+        align-items: center;
+    }
+    
+    .header-content img {
+        height: 50px;
+        margin-right: 10px;
+    }
+    
+    .login-form {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+        padding: 5px;
+        border: 1px solid #1f10aa;
+        border-radius: 5px;
+    }
+    
+    .login-form input[type="submit"] {
+        background-color: rgb(18, 15, 209);
+        color: #e9e9f0;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .container {
+        width: 40%;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+    main {
+        background: rgba(255, 255, 255, 0.541);
+        padding: 50px;
+        margin-top: 100px;
+        border-radius: 5px;
+        color: #000000;
+        text-align: center;
+        max-width: 400px;
+        margin-left: auto;  
+        margin-right: auto;
+    }
+    
+    footer {
+        background-color: #fcfcfca1;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 5px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    @media(max-width: 600px) {
+        body {
+            background-size: cover; 
+            background-attachment: scroll; 
+        }
+    
+        .container {
+            width: 90%;
+        }
+    
+        main {
+            padding: 20px;
+            margin-top: 50px;
+        }
+    
+        footer {
+            font-size: 12px;
+        }
+    
+        .login-form {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+    
+        .login-form input[type="submit"] {
+            width: 100%;
+        }
+    }
+</style>    
+    
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="logo.jpg" alt="Logo">
+            <h1>ITLA HUB</h1>
+        </div>
+        <div class="login-form">
+            <form onsubmit="login(event)">
+                <input type="text" id="username" name="username" placeholder="Usuario" required>
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                <input type="submit" value="Iniciar Sesión">
+            </form>
+        </div>
+    </header>
+
+    <footer>
+        <p>&copy; 2024 ITLA HUB. Instituto de las Américas ITLA. </p>
+    </footer>
+
+    <!-- Start of Tawk.to Script -->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/665d73069a809f19fb3856b7/1hvegil0s';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!-- End of Tawk.to Script -->
+
+    <script>
+        function login(event){
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if(username === 'marcelo' && password === 'bear'){
+                window.location.href = 'landing2.html';
+            }
+            else{
+                window.location.href = 'error2.html';
+            }
+        }
+    </script>
+</body>
+</html>
